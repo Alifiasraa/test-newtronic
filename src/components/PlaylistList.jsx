@@ -3,7 +3,7 @@ import PlaylistItem from "./PlaylistItem";
 const PlaylistList = ({ playlist }) => {
   return (
     <div>
-      <div className="border-2 border-black md:grid md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-6 md:grid md:grid-cols-2 xl:grid-cols-3 ">
         {playlist.map((item) => (
           <PlaylistItem
             key={item.id}

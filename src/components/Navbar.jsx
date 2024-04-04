@@ -1,22 +1,39 @@
-// import logo from "../images/logo.png";
-
 const Navbar = ({ logo }) => {
   return (
-    <header className="flex justify-between items-center h-16 w-full bg-[#67568c] z-100">
-      <div className="">
-        <img className="h-6 my-3" src={logo} alt="Logo Education Newtronic" />
-      </div>
+    <div className="z-100 w-full bg-[#67568c] shadow-xl ">
+      <div className="mx-6 flex h-16 items-center justify-between">
+        {/* logo */}
+        <div className="">
+          <img className="my-3 h-6" src={logo} alt="Logo Education Newtronic" />
+        </div>
 
-      <div>
-        <ul className="flex flex-row gap-x-5 text-white ">
-          <li>Beranda</li>
-          <li>Tentang Kami</li>
-          <li>Produk</li>
-          <li>Layanan</li>
-          <li>Blog</li>
-        </ul>
+        {/* nav */}
+        <nav>
+          <ul className="grid grid-cols-5 divide-x text-center text-white ">
+            <li className="px-3 text-center hover:cursor-pointer hover:text-[#ff6e6c]">
+              Kelas
+            </li>
+            <li className="px-3 text-center hover:cursor-pointer hover:text-[#ff6e6c]">
+              Langganan
+            </li>
+            <li className="px-3 text-center hover:cursor-pointer hover:text-[#ff6e6c]">
+              Program
+            </li>
+            <li className="px-3 text-center hover:cursor-pointer hover:text-[#ff6e6c]">
+              Event
+            </li>
+            <li className="px-3 text-center hover:cursor-pointer hover:text-[#ff6e6c]">
+              Lainnya
+            </li>
+          </ul>
+        </nav>
+
+        {/* button */}
+        <button className="rounded-3xl border bg-white px-4 py-1 font-semibold hover:bg-[#ff6e6c] hover:text-white">
+          Mulai Belajar
+        </button>
       </div>
-    </header>
+    </div>
   );
 };
 

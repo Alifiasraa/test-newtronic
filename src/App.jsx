@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import PlaylistList from "./components/PlaylistList";
@@ -11,7 +11,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://103.183.75.112/api/directory/dataList"
+          "http://103.183.75.112/api/directory/dataList",
         );
         const responseJson = await response.json();
         setData(responseJson.data);
@@ -30,14 +30,20 @@ function App() {
           <header>
             <Navbar logo={directory.logo} />
           </header>
-          <main className="h-screen mb-32">
-            <Hero title={directory.title} description={directory.description} />
-            <h2 className="text-center mt-8 mb-5 font-bold text-[#67568c] text-2xl">
+          <main className="mb-16">
+            <Hero
+              title={directory.title}
+              description={directory.description}
+              banner={directory.banner}
+            />
+            <h2 className="mb-5 mt-8 text-center text-3xl font-bold text-[#67568c] md:text-4xl">
               PLAYLIST
             </h2>
             <PlaylistList playlist={directory.playlist} />
           </main>
-          <footer>{/* <Footer /> */}</footer>
+          <footer className="">
+            <Footer />
+          </footer>
         </div>
       ))}
     </div>
