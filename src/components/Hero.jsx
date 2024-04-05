@@ -1,6 +1,5 @@
 const Hero = ({ title, description, banner }) => {
   return (
-    // <div className="relative bg-top bg-[url('./images/hero.jpeg')] bg-cover w-full h-72 md:h-3/4 md:bg-center">
     <div
       className={`relative h-72 w-full bg-cover bg-top md:h-96 md:bg-center`}
       style={{ backgroundImage: `url(${banner})` }}
@@ -13,6 +12,11 @@ const Hero = ({ title, description, banner }) => {
         <h3 className="text-lg font-semibold italic md:w-2/5 md:text-right xl:w-1/3 xl:text-2xl ">
           {description}
         </h3>
+      </div>
+      <div className="mt-3 flex justify-center md:hidden">
+        <button className="z-10  mt-4 block w-1/2 rounded-3xl bg-white px-4 py-1 font-semibold text-[#67568c]">
+          Mulai Belajar
+        </button>
       </div>
     </div>
   );

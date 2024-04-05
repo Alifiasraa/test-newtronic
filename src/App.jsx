@@ -11,7 +11,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://103.183.75.112/api/directory/dataList",
+          "http://103.183.75.112/api/directory/dataList"
         );
         const responseJson = await response.json();
         setData(responseJson.data);
@@ -42,7 +42,7 @@ function App() {
             <PlaylistList playlist={directory.playlist} />
           </main>
           <footer className="">
-            <Footer />
+            <Footer logo={directory.logo} />
           </footer>
         </div>
       ))}
